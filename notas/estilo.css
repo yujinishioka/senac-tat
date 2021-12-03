@@ -1,0 +1,26 @@
+/* Principais Estilos */
+
+.titulo-principal{
+    text-align: center;
+    color: blue;
+}
+
+.controladores{
+    font-size: large;
+    font-weight: bolder;
+    color: blue;
+}
+
+.comandos{
+    font-weight: bolder;
+}
+
+.endereco{
+    font-size: larger;
+    color: green;
+}
+
+.aviso{
+    font-weight: bolder;
+    color: red;
+}

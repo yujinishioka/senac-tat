@@ -1,0 +1,51 @@
+classes de IPv4 - obs: classe morreu na década de 90
+
+classe a - 0.0.0.0 -> 127.255.255.255
+classe b - 128.0.0.0 -> 191.255.255.255
+classe c - 192.0.0.0 -> 223.255.255.255
+classe d - 224.0.0.0 -> 239.255.255.255
+classe e - 240.0.0.0 -> 247.255.255.255
+
+obs: não utilizar endereços começados em 127, 169, 224
+
+classes privadas
+
+classe a - 10.0.0.0 -> 10.255.255.255
+mask padrão - 255.0.0.0 / 8 (cada campo "cheio" equivale a 8 bits)
+obs: mask com 255 representam redes, e 0 representam Host's
+
+classe b - 172.16.0.0 -> 172.31.255.255
+mask padrão - 255.255.0.0 / 16
+
+classe c - 192.168.0.0 -> 192.168.255.255
+mask padrão - 255.255.255.0 / 24
+
+---------------------------------------------------------------------
+router 1941 (esquerda)
+en
+	configure terminal
+		interface gigabitEthernet 0/1
+			description interface de WAN
+			ip address 10.0.0.1 255.255.255.252
+			no shutdown
+			exit
+		ip route 192.168.1.0 255.255.255.0 10.0.0.2
+		end
+	write
+
+-------
+
+router 2911 (direita)
+en
+	configure terminal
+		interface gigabitEthernet 0/1
+			description interface de WAN
+			ip address 10.0.0.2 255.255.255.252
+			no shutdown
+			exit
+		ip route 192.168.0.0 255.255.255.0 10.0.0.1
+		end
+	write
+----------------------------------------------------------------------
+
+show ip route static
