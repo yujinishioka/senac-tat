@@ -1,0 +1,11 @@
+25 pontos (1 de vga)
+10 barras de 3m = R$ 1837,90
+1 eletroduto 1/2' = R$ 23,57
+300m de cabo = cat6 furukawa R$ 799,00
+27 rj45 femea (3 sobras) = cat6 R$ 918,00
+100 rj45 macho (caixa com 100) = cat6 R$ 78,90
+1 patch panel / 2 = cat6 R$ 911,38
+1 SW = cisco R$ 2549,15
+caixa de passagem = R$ 34,45
+
+Total = R$7152.35
